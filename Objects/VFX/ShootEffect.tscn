@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxyovavqfls0m"]
+
+[ext_resource type="Script" path="res://Scripts/ShootEffect.cs" id="1_feo5e"]
+
+[node name="ShootEffect" type="Line2D"]
+width = 2.0
+script = ExtResource("1_feo5e")

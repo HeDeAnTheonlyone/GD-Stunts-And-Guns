@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm61oj3kd2vpw"]
+
+[ext_resource type="Script" path="res://Scripts/DropedItem.cs" id="1_5ygdv"]
+[ext_resource type="Texture2D" uid="uid://biymg652t2ncn" path="res://Sprites/Items/Magazin.png" id="1_qcrd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owar7"]
+size = Vector2(6, 16)
+
+[node name="DummyMagazin" type="RigidBody2D"]
+script = ExtResource("1_5ygdv")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_qcrd6")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_owar7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="OnTimerRunOutDelete"]

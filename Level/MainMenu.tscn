@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1c8gdrif5x3s"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.cs" id="1_vmrgs"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_vmrgs")
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGame" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 512.0
+offset_right = 1280.0
+offset_bottom = 640.0
+theme_override_font_sizes/font_size = 70
+text = "New Game
+"
+
+[node name="LoadGame" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 704.0
+offset_right = 1280.0
+offset_bottom = 832.0
+theme_override_font_sizes/font_size = 70
+text = "Load Game
+"
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 896.0
+offset_right = 1280.0
+offset_bottom = 1024.0
+theme_override_font_sizes/font_size = 70
+text = "Quit"
+
+[connection signal="button_down" from="Buttons/NewGame" to="." method="OnPressNewGame"]
+[connection signal="button_down" from="Buttons/LoadGame" to="." method="OnPressLoadGame"]
+[connection signal="button_down" from="Buttons/Quit" to="." method="OnPressQuit"]

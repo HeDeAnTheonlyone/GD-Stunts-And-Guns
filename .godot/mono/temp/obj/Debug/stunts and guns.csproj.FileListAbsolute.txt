@@ -1,0 +1,17 @@
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\stunts and guns.deps.json
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\stunts and guns.runtimeconfig.json
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\stunts and guns.dll
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\stunts and guns.pdb
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\GodotSharp.dll
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.csproj.AssemblyReference.cache
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.GeneratedMSBuildEditorConfig.editorconfig
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.AssemblyInfoInputs.cache
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.AssemblyInfo.cs
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.csproj.CoreCompileInputs.cache
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.csproj.CopyComplete
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.dll
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\refint\stunts and guns.dll
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.pdb
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\stunts and guns.genruntimeconfig.cache
+F:\_My Code\GD Stunts And Guns\.godot\mono\temp\obj\Debug\ref\stunts and guns.dll

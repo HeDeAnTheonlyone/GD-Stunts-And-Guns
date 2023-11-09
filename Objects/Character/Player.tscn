@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://rq40ne44p4wf"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_v4nuk"]
+[ext_resource type="Texture2D" uid="uid://mbfk6wux8xpb" path="res://Sprites/Character/Player/Default.png" id="2_f1xj1"]
+[ext_resource type="Script" path="res://Scripts/Gun.cs" id="3_8w7mr"]
+[ext_resource type="Texture2D" uid="uid://cp1ghfbd2x6ux" path="res://Sprites/Items/DesertEagle.png" id="5_x80ta"]
+[ext_resource type="AudioStream" uid="uid://d4g8nx4u08sa5" path="res://Audio/SFX/DesertEagleShoot.ogg" id="6_8qb2t"]
+[ext_resource type="AudioStream" uid="uid://bfb5w4uuavnp0" path="res://Audio/SFX/Reload.ogg" id="7_c7o3e"]
+[ext_resource type="AudioStream" uid="uid://e4xmlekyry0y" path="res://Audio/SFX/EmptyMagazinShooting.ogg" id="8_dfpni"]
+[ext_resource type="PackedScene" uid="uid://b4cjhwv5dmki" path="res://Objects/HUD.tscn" id="9_pyln2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3th7"]
+size = Vector2(48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f8tp"]
+atlas = ExtResource("5_x80ta")
+region = Rect2(0, 0, 36, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30jyu"]
+atlas = ExtResource("5_x80ta")
+region = Rect2(36, 0, 36, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8rfut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f8tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30jyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f8tp")
+}],
+"loop": false,
+"name": &"Shoot",
+"speed": 15.0
+}]
+
+[node name="Player" type="RigidBody2D"]
+continuous_cd = 1
+script = ExtResource("1_v4nuk")
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(1.3, 1.3)
+position_smoothing_speed = 50.0
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("2_f1xj1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y3th7")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Gun" type="Node2D" parent="Node"]
+script = ExtResource("3_8w7mr")
+
+[node name="Anim" type="AnimatedSprite2D" parent="Node/Gun"]
+sprite_frames = SubResource("SpriteFrames_8rfut")
+animation = &"Shoot"
+offset = Vector2(0, -18)
+
+[node name="SFX" type="Node" parent="Node/Gun"]
+
+[node name="Shoot" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+process_mode = 3
+stream = ExtResource("6_8qb2t")
+
+[node name="Reload" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+stream = ExtResource("7_c7o3e")
+
+[node name="EmptyMagazinShooting" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+stream = ExtResource("8_dfpni")
+
+[node name="Trajectory" type="RayCast2D" parent="Node/Gun"]
+top_level = true
+enabled = false
+target_position = Vector2(0, -1200)
+hit_from_inside = true
+
+[node name="HUD" parent="." instance=ExtResource("9_pyln2")]
