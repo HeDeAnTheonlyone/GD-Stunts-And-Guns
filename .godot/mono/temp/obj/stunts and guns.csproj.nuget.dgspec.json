@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\_MY CODE\\GD STUNTS AND GUNS\\stunts and guns.csproj": {}
+    "F:\\_My Code\\GD Stunts And Guns\\stunts and guns.csproj": {}
   },
   "projects": {
-    "F:\\_MY CODE\\GD STUNTS AND GUNS\\stunts and guns.csproj": {
+    "F:\\_My Code\\GD Stunts And Guns\\stunts and guns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\_MY CODE\\GD STUNTS AND GUNS\\stunts and guns.csproj",
+        "projectUniqueName": "F:\\_My Code\\GD Stunts And Guns\\stunts and guns.csproj",
         "projectName": "stunts and guns",
-        "projectPath": "F:\\_MY CODE\\GD STUNTS AND GUNS\\stunts and guns.csproj",
+        "projectPath": "F:\\_My Code\\GD Stunts And Guns\\stunts and guns.csproj",
         "packagesPath": "C:\\Users\\HeDeAn\\.nuget\\packages\\",
-        "outputPath": "F:\\_MY CODE\\GD STUNTS AND GUNS\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "F:\\_My Code\\GD Stunts And Guns\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

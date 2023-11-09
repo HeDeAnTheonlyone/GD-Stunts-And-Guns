@@ -1,3 +1,8 @@
+res://Level/MainMenu.tscn
+res://Level/DebugWorld.tscn
+res://Objects/Character/Player.tscn
+res://Objects/PauseMenu.tscn
+res://Objects/HUD.tscn
 res://Scripts/DeathEffect.cs
 res://Scripts/DropedItem.cs
 res://Scripts/Enemy.cs
@@ -8,12 +13,3 @@ res://Scripts/Player.cs
 res://Scripts/PlayerSpawn.cs
 res://Scripts/ShootEffect.cs
 res://Scripts/Utils.cs
-res://Objects/Character/Player.tscn
-res://Level/MainMenu.tscn
-res://Level/DebugWorld.tscn
-res://Objects/PauseMenu.tscn
-res://Objects/PlayerSpawn.tscn
-res://Objects/HUD.tscn
-res://Shaders/Player.gdshader
-res://Shaders/a.gdshader
-res://node_3d.tscn
