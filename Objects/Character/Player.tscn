@@ -48,7 +48,7 @@ position_smoothing_speed = 50.0
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("2_f1xj1")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="HitboxShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y3th7")
 
 [node name="Node" type="Node" parent="."]
@@ -63,14 +63,14 @@ offset = Vector2(0, -18)
 
 [node name="SFX" type="Node" parent="Node/Gun"]
 
-[node name="Shoot" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+[node name="Shoot" type="AudioStreamPlayer2D" parent="Node/Gun/SFX"]
 process_mode = 3
 stream = ExtResource("6_8qb2t")
 
-[node name="Reload" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+[node name="Reload" type="AudioStreamPlayer2D" parent="Node/Gun/SFX"]
 stream = ExtResource("7_c7o3e")
 
-[node name="EmptyMagazinShooting" type="AudioStreamPlayer" parent="Node/Gun/SFX"]
+[node name="EmptyMagazinShooting" type="AudioStreamPlayer2D" parent="Node/Gun/SFX"]
 stream = ExtResource("8_dfpni")
 
 [node name="Trajectory" type="RayCast2D" parent="Node/Gun"]

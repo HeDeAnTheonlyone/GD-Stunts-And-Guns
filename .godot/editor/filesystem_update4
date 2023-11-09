@@ -1,14 +1,17 @@
+res://Objects/Items/MagazinPack.tscn
 res://Level/MainMenu.tscn
 res://Level/DebugWorld.tscn
 res://Objects/Character/Player.tscn
 res://Objects/PauseMenu.tscn
 res://Objects/HUD.tscn
+res://Objects/VFX/DeathEffect.tscn
 res://Scripts/DeathEffect.cs
 res://Scripts/DropedItem.cs
 res://Scripts/Enemy.cs
 res://Scripts/GameManager.cs
 res://Scripts/Gun.cs
 res://Scripts/MainMenu.cs
+res://Scripts/PickUpMagazinPack.cs
 res://Scripts/Player.cs
 res://Scripts/PlayerSpawn.cs
 res://Scripts/ShootEffect.cs

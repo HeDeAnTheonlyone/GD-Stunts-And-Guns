@@ -12,7 +12,7 @@ script = ExtResource("1_5ygdv")
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_qcrd6")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="HitboxShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_owar7")
 
 [node name="Timer" type="Timer" parent="."]

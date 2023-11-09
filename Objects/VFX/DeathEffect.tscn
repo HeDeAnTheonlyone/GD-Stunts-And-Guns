@@ -36,8 +36,9 @@ turbulence_noise_scale = 5.05
 [node name="DeathEffect" type="Node2D"]
 script = ExtResource("1_mh1rd")
 
-[node name="Squish" type="AudioStreamPlayer" parent="."]
+[node name="Squish" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_aocel")
+attenuation = 0.4
 
 [node name="Blood" type="GPUParticles2D" parent="."]
 emitting = false
