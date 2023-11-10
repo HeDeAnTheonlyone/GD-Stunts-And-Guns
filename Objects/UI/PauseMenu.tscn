@@ -1,8 +1,11 @@
-[gd_scene format=3 uid="uid://kf53611rmw5w"]
+[gd_scene load_steps=2 format=3 uid="uid://kf53611rmw5w"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.cs" id="1_ktjhx"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 layer = 2
+script = ExtResource("1_ktjhx")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -45,7 +48,7 @@ theme_override_font_sizes/font_size = 70
 text = "Continue"
 metadata/_edit_use_anchors_ = true
 
-[node name="Settings" type="Button" parent="Buttons"]
+[node name="Restart Level" type="Button" parent="Buttons"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,7 +62,7 @@ offset_bottom = 278.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 70
-text = "Settings"
+text = "Restart Level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Quit" type="Button" parent="Buttons"]
@@ -78,3 +81,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 70
 text = "Quit"
 metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Buttons/Continue" to="." method="OnPressContinue"]
+[connection signal="button_down" from="Buttons/Restart Level" to="." method="OnPressRestartLevel"]
+[connection signal="button_down" from="Buttons/Quit" to="." method="OnPressQuitGame"]
