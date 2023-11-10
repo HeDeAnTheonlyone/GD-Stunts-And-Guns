@@ -1,5 +1,5 @@
-Panel
 CanvasLayer
+Panel
 Node2D
 AudioStreamPlayer2D
 GPUParticles2D
@@ -30,4 +30,3 @@ Label
 TextEdit
 Camera2D
 AnimatedSprite2D
-TileMap

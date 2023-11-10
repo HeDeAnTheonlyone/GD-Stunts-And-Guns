@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://rq40ne44p4wf"]
+[gd_scene load_steps=14 format=3 uid="uid://rq40ne44p4wf"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_v4nuk"]
 [ext_resource type="Texture2D" uid="uid://mbfk6wux8xpb" path="res://Sprites/Character/Player/Default.png" id="2_f1xj1"]
@@ -7,7 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://d4g8nx4u08sa5" path="res://Audio/SFX/DesertEagleShoot.ogg" id="6_8qb2t"]
 [ext_resource type="AudioStream" uid="uid://bfb5w4uuavnp0" path="res://Audio/SFX/Reload.ogg" id="7_c7o3e"]
 [ext_resource type="AudioStream" uid="uid://e4xmlekyry0y" path="res://Audio/SFX/EmptyMagazinShooting.ogg" id="8_dfpni"]
-[ext_resource type="PackedScene" uid="uid://b4cjhwv5dmki" path="res://Objects/HUD.tscn" id="9_pyln2"]
+[ext_resource type="PackedScene" uid="uid://kf53611rmw5w" path="res://Objects/UI/PauseMenu.tscn" id="9_7yaif"]
+[ext_resource type="PackedScene" uid="uid://b4cjhwv5dmki" path="res://Objects/UI/HUD.tscn" id="9_pyln2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3th7"]
 size = Vector2(48, 48)
@@ -80,3 +81,7 @@ target_position = Vector2(0, -1200)
 hit_from_inside = true
 
 [node name="HUD" parent="." instance=ExtResource("9_pyln2")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_7yaif")]
+process_mode = 2
+visible = false

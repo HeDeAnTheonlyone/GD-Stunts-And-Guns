@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d1a8nf5tkysvp" path="res://Sprites/TileSets/WoodBlockTileset.png" id="5_cbnsb"]
 [ext_resource type="PackedScene" uid="uid://cwhh8inbp8cso" path="res://Objects/Items/MagazinPack.tscn" id="8_lcw0v"]
 [ext_resource type="PackedScene" uid="uid://b1kxfnhsjcryn" path="res://Objects/Character/Enemy.tscn" id="8_u3iba"]
-[ext_resource type="PackedScene" uid="uid://d3a00lht8l4rd" path="res://Objects/PlayerSpawn.tscn" id="8_ul1a0"]
+[ext_resource type="PackedScene" uid="uid://d3a00lht8l4rd" path="res://Objects/Misc/PlayerSpawn.tscn" id="8_ul1a0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yuvsq"]
 friction = 0.35
