@@ -42,9 +42,9 @@ public partial class Gun : Node2D
     private VSlider bulletDisp;
     private Label magazinDisp;
     private AnimationPlayer magazinAnim;
-    private AudioStreamPlayer sfxShoot;
-    private AudioStreamPlayer sfxReload;
-    private AudioStreamPlayer sfxEmptyMagazinShooting;
+    private AudioStreamPlayer2D sfxShoot;
+    private AudioStreamPlayer2D sfxReload;
+    private AudioStreamPlayer2D sfxEmptyMagazinShooting;
 
     private Vector2 gunDir;
     private float mouseDistance;
@@ -66,9 +66,9 @@ public partial class Gun : Node2D
         bulletDisp = GetNode<VSlider>("../../HUD/Bullets");
         magazinDisp = GetNode<Label>("../../HUD/MagazinsCounter");
         magazinAnim = magazinDisp.GetNode<AnimationPlayer>("MagazinAnim");
-        sfxShoot = GetNode<AudioStreamPlayer>("SFX/Shoot");
-        sfxReload = GetNode<AudioStreamPlayer>("SFX/Reload");
-        sfxEmptyMagazinShooting = GetNode<AudioStreamPlayer>("SFX/EmptyMagazinShooting");
+        sfxShoot = GetNode<AudioStreamPlayer2D>("SFX/Shoot");
+        sfxReload = GetNode<AudioStreamPlayer2D>("SFX/Reload");
+        sfxEmptyMagazinShooting = GetNode<AudioStreamPlayer2D>("SFX/EmptyMagazinShooting");
 
         magazinAnim.AnimationFinished += OnFinishReloading;
 
@@ -207,4 +207,8 @@ public partial class Gun : Node2D
     }
 
     private void AddDummyMagazinToScene(RigidBody2D instance) => GetNode("../../../").AddChild(instance);
+
+
+
+    public void AddMagazins(int amount) => Magazins += amount;
 }

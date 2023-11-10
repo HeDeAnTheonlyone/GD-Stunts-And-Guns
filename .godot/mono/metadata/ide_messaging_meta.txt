@@ -1,2 +1,2 @@
-﻿62768
+﻿49152
 F:/Godot_v4.1.2-stable_mono_win64/Godot_v4.1.2-stable_mono_win64.exe
