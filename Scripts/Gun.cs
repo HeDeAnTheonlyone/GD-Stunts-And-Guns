@@ -10,27 +10,23 @@ public partial class Gun : Node2D
     private int bullets = 7;
     [Export] public int Bullets
     {
-        get
-        {
-            return bullets;
-        }
+        get => bullets;
         private set
         {
             bullets = value;
-            bulletDisp.Value = bullets;
+            if (bulletDisp != null)
+                bulletDisp.Value = bullets;
         }
     }
     private int magazins = 5;
     [Export] public int Magazins
     {
-        get
-        {
-            return magazins;
-        }
+        get => magazins;
         private set
         {
             magazins = value;
-            magazinDisp.Text = magazins.ToString();
+            if (magazinDisp != null)
+                magazinDisp.Text = magazins.ToString();
         }
     }
 

@@ -1,0 +1,6 @@
+
+enum ForceType
+{
+    Constant,
+    Impuls
+}

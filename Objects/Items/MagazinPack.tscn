@@ -47,7 +47,7 @@ scale_max = 0.3
 color = Color(1, 1, 1, 0.705882)
 attractor_interaction_enabled = false
 
-[node name="Anchor" type="Node2D"]
+[node name="MagazinPackAnchor" type="Node2D"]
 
 [node name="MagazinPack" type="Node2D" parent="."]
 position = Vector2(0, -2.80985)
