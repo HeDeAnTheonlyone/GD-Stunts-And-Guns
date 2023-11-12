@@ -1,4 +1,8 @@
+res://Objects/Misc/LaunchPad.tscn
+res://Shaders/LaunchPadTextureScroll.gdshader
+res://Level/DebugWorld.tscn
 res://Level/MainMenu.tscn
+res://Objects/Character/Player.tscn
 res://Scripts/DeathEffect.cs
 res://Scripts/DropedItem.cs
 res://Scripts/Enemy.cs
@@ -10,9 +14,5 @@ res://Scripts/Player.cs
 res://Scripts/PlayerSpawn.cs
 res://Scripts/ShootEffect.cs
 res://Scripts/Utils.cs
-res://Level/DebugWorld.tscn
-res://Objects/Character/Player.tscn
-res://Objects/PauseMenu.tscn
-res://Objects/UI/PauseMenu.tscn
-res://Objects/Misc/PlayerSpawn.tscn
-res://Objects/UI/HUD.tscn
+res://Scripts/LaunchPad.cs
+res://Objects/Items/MagazinPack.tscn

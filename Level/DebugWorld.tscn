@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cd3vow36inl47"]
+[gd_scene load_steps=17 format=3 uid="uid://cd3vow36inl47"]
 
 [ext_resource type="Texture2D" uid="uid://c2lo27umburn3" path="res://Sprites/TileSets/MetalBlockSlopes_new.png" id="1_rsofc"]
 [ext_resource type="Texture2D" uid="uid://vj1wx2xc02y6" path="res://Sprites/TileSets/MetalBlockTileset2.png" id="2_wvpnt"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cwhh8inbp8cso" path="res://Objects/Items/MagazinPack.tscn" id="8_lcw0v"]
 [ext_resource type="PackedScene" uid="uid://b1kxfnhsjcryn" path="res://Objects/Character/Enemy.tscn" id="8_u3iba"]
 [ext_resource type="PackedScene" uid="uid://d3a00lht8l4rd" path="res://Objects/Misc/PlayerSpawn.tscn" id="8_ul1a0"]
+[ext_resource type="PackedScene" uid="uid://co02pp2t1vwfr" path="res://Objects/Misc/LaunchPad.tscn" id="9_o0qeb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yuvsq"]
 friction = 0.35
@@ -263,8 +264,15 @@ position = Vector2(976, 559)
 [node name="PlayerSpawn" parent="." instance=ExtResource("8_ul1a0")]
 position = Vector2(-99, 72)
 
-[node name="Anchor" parent="." instance=ExtResource("8_lcw0v")]
-position = Vector2(-781, 148)
+[node name="MagazinPackAnchor" parent="." instance=ExtResource("8_lcw0v")]
+position = Vector2(-818, 103)
 
-[node name="Anchor2" parent="." instance=ExtResource("8_lcw0v")]
-position = Vector2(-477, 65)
+[node name="MagazinPackAnchor2" parent="." instance=ExtResource("8_lcw0v")]
+position = Vector2(-567, -51)
+
+[node name="LaunchPad" parent="." instance=ExtResource("9_o0qeb")]
+position = Vector2(116, 567)
+rotation = -0.785398
+Facing = -45
+LaunchStrength = 100.0
+forceType = 1

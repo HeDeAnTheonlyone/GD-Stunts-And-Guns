@@ -54,7 +54,7 @@ public partial class Utils : Node
             Dictionary data = (Dictionary)Json.ParseString(file.GetLine());
 
             GameManager.instance.currentLevel = (string)data["Level"];
-            playerGun.CallDeferred("LoadSaveData", (int)data["Bullets"], (int)data["Magazins"]);
+            playerGun.LoadSaveData((int)data["Bullets"], (int)data["Magazins"]);
         }
     }
 
@@ -62,11 +62,21 @@ public partial class Utils : Node
 
     public void SwitchLevel(string level)
     {
-        if (GetNode<RigidBody2D>($"../{level}/Player") != null)
-            GetNode<Node2D>($"../{level}").RemoveChild(GameManager.instance.player);
+        if (GameManager.instance.player.GetParentOrNull<Node2D>() != null)
+            GameManager.instance.player.GetParent().RemoveChild(GameManager.instance.player);
 
         SceneTree tree = GetTree();
         tree.ChangeSceneToFile($"res://Level/{level}.tscn");
         GameManager.instance.currentLevel = level;
+    }
+
+
+
+    public static Vector2 AngleToVector(float angle, bool useDegreesInsteadOfRadiance)
+    {
+        if(useDegreesInsteadOfRadiance)
+            angle = Mathf.DegToRad(angle);
+
+        return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
     }
 }
