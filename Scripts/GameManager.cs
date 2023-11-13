@@ -28,11 +28,8 @@ public partial class GameManager : Node
     public override void _Input(InputEvent @event)
     {
         if (@event.IsActionPressed("Pause"))
-        {
             if (GetNodeOrNull<CanvasLayer>(".. / MainMenu") == null)
                 PauseGame();
-        }
-
 
         if (@event.IsActionPressed("Save"))
             Utils.instance.SaveGame();
