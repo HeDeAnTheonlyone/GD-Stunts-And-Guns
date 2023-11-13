@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cd3vow36inl47"]
+[gd_scene load_steps=18 format=3 uid="uid://cd3vow36inl47"]
 
 [ext_resource type="Texture2D" uid="uid://c2lo27umburn3" path="res://Sprites/TileSets/MetalBlockSlopes_new.png" id="1_rsofc"]
 [ext_resource type="Texture2D" uid="uid://vj1wx2xc02y6" path="res://Sprites/TileSets/MetalBlockTileset2.png" id="2_wvpnt"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b1kxfnhsjcryn" path="res://Objects/Character/Enemy.tscn" id="8_u3iba"]
 [ext_resource type="PackedScene" uid="uid://d3a00lht8l4rd" path="res://Objects/Misc/PlayerSpawn.tscn" id="8_ul1a0"]
 [ext_resource type="PackedScene" uid="uid://co02pp2t1vwfr" path="res://Objects/Misc/LaunchPad.tscn" id="9_o0qeb"]
+[ext_resource type="PackedScene" uid="uid://dfedp3r2p14ew" path="res://Objects/Misc/InboundsChecker.tscn" id="10_n2vqv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yuvsq"]
 friction = 0.35
@@ -257,9 +258,12 @@ layer_0/tile_data = PackedInt32Array(1245219, 131075, 1, 1245218, 131075, 1, 124
 
 [node name="Enemy" parent="." instance=ExtResource("8_u3iba")]
 position = Vector2(104, 47)
+followPlayer = true
+speed = 200.0
 
 [node name="Enemy2" parent="." instance=ExtResource("8_u3iba")]
 position = Vector2(976, 559)
+followPlayer = true
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("8_ul1a0")]
 position = Vector2(-99, 72)
@@ -271,8 +275,27 @@ position = Vector2(-818, 103)
 position = Vector2(-567, -51)
 
 [node name="LaunchPad" parent="." instance=ExtResource("9_o0qeb")]
-position = Vector2(116, 567)
-rotation = -0.785398
-Facing = -45
-LaunchStrength = 100.0
+position = Vector2(-603, 162)
+rotation = -1.5708
+Facing = -90
 forceType = 1
+
+[node name="LaunchPad2" parent="." instance=ExtResource("9_o0qeb")]
+position = Vector2(-924, 220)
+rotation = -1.5708
+Facing = -90
+LaunchStrength = 50.0
+
+[node name="LaunchPad3" parent="." instance=ExtResource("9_o0qeb")]
+position = Vector2(-976, 220)
+rotation = -1.5708
+Facing = -90
+LaunchStrength = 50.0
+
+[node name="InboundsChecker" parent="." instance=ExtResource("10_n2vqv")]
+position = Vector2(-66.874, 1014.46)
+
+[node name="HitboxShape" parent="InboundsChecker" index="0"]
+polygon = PackedVector2Array(-1308.13, -43.4602, 1821.87, -20.4602, 1803.87, -1874.46, -1335.13, -1897.46)
+
+[editable path="InboundsChecker"]

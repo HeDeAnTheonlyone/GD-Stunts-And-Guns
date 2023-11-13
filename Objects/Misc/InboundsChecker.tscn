@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfedp3r2p14ew"]
+
+[ext_resource type="Script" path="res://Scripts/InboundsChecker.cs" id="1_nedve"]
+
+[node name="InboundsChecker" type="Area2D"]
+script = ExtResource("1_nedve")
+
+[node name="HitboxShape" type="CollisionPolygon2D" parent="."]
+
+[connection signal="body_exited" from="." to="." method="OnOutOfBounds"]

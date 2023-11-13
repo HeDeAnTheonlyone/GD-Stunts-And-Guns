@@ -38,7 +38,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="RigidBody2D" groups=["KillOnOutOfBounds"]]
 continuous_cd = 1
 script = ExtResource("1_v4nuk")
 

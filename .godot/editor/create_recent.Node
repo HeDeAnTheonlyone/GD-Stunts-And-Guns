@@ -1,5 +1,7 @@
-CollisionShape2D
+CollisionPolygon2D
 Area2D
+ResourcePreloader
+CollisionShape2D
 Sprite2D
 CanvasLayer
 Panel
@@ -13,13 +15,11 @@ Control
 Node
 HBoxContainer
 Container
-ResourcePreloader
 VSlider
 Timer
 RigidBody2D
 Line2D
 RayCast2D
-CollisionPolygon2D
 GPUParticles3D
 CPUParticles2D
 AudioStreamPlayer
